@@ -1,0 +1,6 @@
+/* Super simple reset */
+body, html { font-family: sans-serif; }
+* { box-sizing: border-box; }
+
+/* Module stuff */
+.panel { border: 1px solid #333; display: inline-block; }
