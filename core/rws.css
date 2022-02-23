@@ -2,5 +2,22 @@
 body, html { font-family: sans-serif; }
 * { box-sizing: border-box; }
 
+/* fonts */
+
 /* Module stuff */
-.panel { border: 1px solid #333; display: inline-block; }
+.panel { border: 1px solid #333; display: inline-block; float: left; position: relative; margin: 10px; box-shadow: 2px 2px 6px #ddd; }
+
+.panel > nav { width: 100%; background: #ddd; color: #000; padding: 10px; text-align: center; border-bottom: 1px solid #333; }
+.panel > container { width: 100%; position: relative; display: block; }
+
+.connected { color: green; }
+.closed { color: red; }
+
+.size3 { width: 50%; }
+.size2 { width: 33%; }
+.size1 { width: 25%; }
+
+.padded { padding: 10px; }
+.mpadded { margin: 10px; }
+
+#statuspanel { color: #999; }

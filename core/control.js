@@ -8,9 +8,18 @@ class Control {
    static visible = true
    static invisible = false
 
-   constructor(size, visible) {
+   constructor(size, visible, title) {
       this.element = document.createElement("div")
       this.element.className = "module panel size" + size + " " + (visible ? "show" : "hide")
+      this.contents = document.createElement('container')
+      this.element.appendChild(document.createElement('nav'))
+      this.element.appendChild(this.contents)
+      this.changeTitle(title)
       document.getElementById("modulecontainer").appendChild(this.element)
    }
+
+   changeTitle(newTitle) {
+      this.element.getElementsByTagName('nav')[0].innerText = newTitle
+   }
+
 }

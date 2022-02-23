@@ -2,11 +2,35 @@
 <html>
    <head>
       <link rel="stylesheet" href="core/rws.css"/>
+      <link rel="stylesheet" href="http://10.156.209.2/Font-Awesome/css/all.css"/>
+      <script src="http://10.156.209.2/roslibjs/build/roslib.min.js"></script>
+      <script src="core/roscon.js"></script>
       <script src="core/control.js"></script>
       <script src="core/module_loader.js"></script>
    </head>
    <body>
-      <h1>Hello, World!</h1>
-      <div id="modulecontainer"></div>
+      <h1>Rover Debug Panel</h1>
+      <div id="modulecontainer">
+         <div class="panel size1" id="statuspanel">
+            <nav>Status Panel</nav>
+            <section class="padded">
+               <div id="status_roscon">
+                  <i class="fa-solid fa-circle"></i> ROSbridge (ROSCON)
+               </div>
+               <div id="status_gps">
+                  <i class="fa-solid fa-circle"></i> GPS
+               </div>
+               <div id="status_lidar">
+                  <i class="fa-solid fa-circle"></i> LIDAR
+               </div>
+               <div id="status_comms">
+                  <i class="fa-solid fa-circle"></i> COMMs
+               </div>
+               <div id="status_xbox">
+                  <i class="fa-solid fa-circle"></i> XBox Controller
+               </div>
+            </section>
+         </div>
+      </div>
   </body>
 </html>
