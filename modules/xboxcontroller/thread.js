@@ -36,7 +36,79 @@ let listener = new ROSLIB.Topic({
 // add callback for when we receive a message, as a lambda function
 listener.subscribe(message => {
    lastmessagetime = Date.now()
-   console.log(message)
+   //console.log(message)
+
+   console.log(message.buttons.toString())
+
+   // A button
+   if (message.buttons[0] == 1) {
+      document.getElementById('BBottom').children[1].setAttribute('fill', 'rgba(0,0,0,255)')
+   } else {
+      document.getElementById('BBottom').children[1].setAttribute('fill', 'rgba(0,0,0,0)')
+   }
+
+   // B button
+   if (message.buttons[1] == 1) {
+      document.getElementById('BRight').children[1].setAttribute('fill', 'rgba(0,0,0,255)')
+   } else {
+      document.getElementById('BRight').children[1].setAttribute('fill', 'rgba(0,0,0,0)')
+   }
+
+   // X button
+   if (message.buttons[2] == 1) {
+      document.getElementById('BLeft').children[1].setAttribute('fill', 'rgba(0,0,0,255)')
+   } else {
+      document.getElementById('BLeft').children[1].setAttribute('fill', 'rgba(0,0,0,0)')
+   }
+
+   // Y button
+   if (message.buttons[3] == 1) {
+      document.getElementById('BTop').children[1].setAttribute('fill', 'rgba(0,0,0,255)')
+   } else {
+      document.getElementById('BTop').children[1].setAttribute('fill', 'rgba(0,0,0,0)')
+   }
+
+   // L bumper
+   if (message.buttons[4] == 1) {
+      document.getElementById('L1').setAttribute('fill', 'rgba(0,0,0,255)')
+   } else {
+      document.getElementById('L1').setAttribute('fill', 'rgba(0,0,0,0)')
+   }
+
+   // R bumper
+   if (message.buttons[5] == 1) {
+      document.getElementById('R1').setAttribute('fill', 'rgba(0,0,0,255)')
+   } else {
+      document.getElementById('R1').setAttribute('fill', 'rgba(0,0,0,0)')
+   }
+
+   // Left Meta button
+   if (message.buttons[6] == 1) {
+      document.getElementById('LMeta').children[0].setAttribute('fill', 'rgba(0,0,0,255)')
+   } else {
+      document.getElementById('LMeta').children[0].setAttribute('fill', 'rgba(0,0,0,0)')
+   }
+
+   // Right Meta button
+   if (message.buttons[7] == 1) {
+      document.getElementById('RMeta').children[0].setAttribute('fill', 'rgba(0,0,0,255)')
+   } else {
+      document.getElementById('RMeta').children[0].setAttribute('fill', 'rgba(0,0,0,0)')
+   }
+
+   // L Stick
+   if (message.buttons[9] == 1) {
+      document.getElementById('LeftStick').setAttribute('fill', 'rgba(0,0,0,255)')
+   } else {
+      document.getElementById('LeftStick').setAttribute('fill', 'rgba(0,0,0,0)')
+   }
+
+   // R Stick
+   if (message.buttons[10] == 1) {
+      document.getElementById('RightStick').setAttribute('fill', 'rgba(0,0,0,255)')
+   } else {
+      document.getElementById('RightStick').setAttribute('fill', 'rgba(0,0,0,0)')
+   }
 })
 
 // SVG stolen from https://gamepad-tester.com/
