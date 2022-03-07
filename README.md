@@ -25,10 +25,9 @@ This repository and front-end is orchestrated in such a way that there should be
 A module is contained within a folder that has a unique name.  Let's take our example plugin, `example`, which is located in the `modules` folder, as would be appropriate.  The contents of this folder is as follows:
 ```
 modules/example/thread.js
-modules/example/config.json
 modules/example/assets/
 ```
 
-The `thread.js` contains the code which sets up the timers and callbacks for this module.  The `config.json` defines parameters about this module for the core.  The `assets` folder contains any pictures, models, or other data files which might be necessary.
+The `thread.js` contains the code which sets up the timers and callbacks for this module.  The `assets` folder contains any pictures, models, or other data files which might be necessary.
 
 After creating a module, the only file that should be edited to enable it in the core is `module_list.json`.
