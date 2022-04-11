@@ -9,7 +9,7 @@
       <script src="core/module_loader.js"></script>
    </head>
    <body>
-      <h1>Rover Debug Panel</h1>
+      <h1>Rover Debug Panel <form id="rosportform" onsubmit="document.location = document.location.origin + '?' + rosportfield.value; return false"><input id="rosportfield" type="text" placeholder="0000"><script>rosportfield.value = document.location.search.substring(1)</script></form></h1>
       <div id="modulecontainer">
          <div class="panel size1" id="statuspanel">
             <nav>Status Panel</nav>

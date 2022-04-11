@@ -21,3 +21,6 @@ body, html { font-family: sans-serif; }
 .mpadded { margin: 10px; }
 
 #statuspanel { color: #999; }
+
+#rosportform { display: inline; }
+#rosportfield { display: inline; font-size: inherit; padding: 0px; border: none; border-bottom: 1px solid black; font-family: monospace; width: 4em; }
